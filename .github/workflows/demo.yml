@@ -48,5 +48,7 @@ jobs:
           name: dist-files
       - name: Output Contents
         run: ls 
+      - name: Output Filename
+        run: echo "${{ needs.build.outputs.js-file }}"
       - name: Deploy
         run: echo "Deploying..."
